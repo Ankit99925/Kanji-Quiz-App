@@ -1,70 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>quizapp</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="main">
         <div class="card">
             <div class="contents">
-                <div class="question"></div>
-                <div class="answer">
-                    <button >a</button>
-                    <button >b</button>
-                    <button >c</button>
-                    <button >d</button>
+                <div class="question">PRESS START TO START THE QUIZZ</div>
+                <div class="answerbtn hide">
+                    <button>a</button>
+                    <button>b</button>
+                    <button>c</button>
+                    <button>d</button>
                 </div>
-                <button >next</button>
-                <button id="start-btn">start</button>
+                <div class="result"></div>
+                <button class="next">next</button>
+                <button class="start-btn">start</button>
             </div>
         </div>
     </div>
-    <script>
-        let currentquestionindex=0;
-        let question=document.querySelector('.question');
-        let answer=document.querySelector('.answer');
-        let start_btn=document.getElementById('start-btn');
-        start_btn.addEventListener('click',()=>{
-            showquestion();
-        })
-        function showquestion(){
-            question.innerHTML=questions[currentquestionindex].question;
-            questions[currentquestionindex].answers.forEach(element => {
-                let button=document.createElement('button');
-                button.innerHTML=element.text;
-                answer.appendChild(button);
-                
-           });
-        }
+    <script src="./app.js">
+       
 
-
-
-        const questions=[
-            {
-                question:'what is 2+2',
-                answers:[{text:4,correct:true},{text:8,correct:false},{text:7,correct:false},{text:5,correct:false}]
-
-            },
-            {
-                question:'what is 2+8',
-                answers:[{text:4,correct:true},{text:8,correct:false},{text:7,correct:false},{text:5,correct:false}],
-
-            },
-            {
-                question:'what is 2+2',
-                answers:[{text:4,correct:true},{text:8,correct:false},{text:7,correct:false},{text:5,correct:false}],
-
-            },
-            {
-                question:'what is 2+2',
-                answers:[{text:4,correct:true},{text:8,correct:false},{text:7,correct:false},{text:5,correct:false}],
-
-            }
-        ]
-        
     </script>
-    
+
 </body>
+
 </html>
